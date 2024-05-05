@@ -1,0 +1,21 @@
+{
+  "name": "wishanddell/craft-glide",
+  "description": "Adds on-demand image transform support to Craft using Glide",
+  "version": "2.0.0",
+  "type": "craft-plugin",
+  "require": {
+    "craftcms/cms": "^5.0.0",
+    "league/glide": "^2.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "wishanddell\\glide\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "glide",
+    "name": "Glide Image Transforms",
+    "developer": "Wish & Dell",
+    "developerUrl": "https://www.wishanddell.co.uk"
+  }
+}
