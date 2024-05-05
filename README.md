@@ -35,7 +35,7 @@ It should be possible to create a CDN distribution using your domain as the orig
 
 By signing each request with a private key, no alterations can be made to the URL parameters.
 
-Create the file `config/glide.php` with the following:
+Create the file `config/glide2.php` with the following:
 
     <?php
     

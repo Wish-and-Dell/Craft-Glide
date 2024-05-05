@@ -21,8 +21,8 @@ class Plugin extends \craft\base\Plugin
             UrlManager::class,
             UrlManager::EVENT_REGISTER_SITE_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
-                $event->rules['glide/<path:.*>'] = 'glide/parse';
-                $event->rules['glide'] = 'glide/parse';
+                $event->rules['glide/<path:.*>'] = 'glide2/parse';
+                $event->rules['glide'] = 'glide2/parse';
             }
         );
         
