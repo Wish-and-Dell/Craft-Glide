@@ -8,6 +8,7 @@ use wishanddell\glide\Plugin;
 
 use League\Glide\ServerFactory;
 use League\Glide\Signatures\SignatureFactory;
+use League\Glide\Urls\UrlBuilderFactory;
 
 class ParseController extends Controller
 {
@@ -36,11 +37,10 @@ class ParseController extends Controller
 
         $firstItemKey = array_key_first($assets);
         $asset        = $assets[$firstItemKey];
-
+        
         $settings = Plugin::getInstance()->getSettings();
         if ($settings->signed) {
-            $parts = parse_url($asset->volume->url);
-            SignatureFactory::create($settings->key)->validateRequest($parts['path'].$path, $params);
+            SignatureFactory::create($settings->key)->validateRequest('glide/' . $asset->folderPath . $asset->filename, $params);
         }
 
         // Load Glide
