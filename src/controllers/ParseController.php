@@ -46,6 +46,7 @@ class ParseController extends Controller
         // Load Glide
         $server = ServerFactory::create([
             'source' => Craft::parseEnv($asset->getVolume()->fs->path),
+            'watermarks' => Craft::parseEnv($asset->getVolume()->fs->path),
             'cache' => '../storage/glide',
             'driver' => $settings->driver
         ]);
